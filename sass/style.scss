@@ -1,0 +1,499 @@
+$lightOrange: #d0aa8c;
+$darkGray: #383339;
+$lightGray: rgba(0, 0, 0, 0.1);
+$textGray: #626262;
+$white: #fff;
+
+body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  font-family: "Montserrat", sans-serif;
+}
+
+.wrapper {
+  width: 80%;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.header {
+  background-color: $white;
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  width: 100%;
+}
+
+.header__rows {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.header__row {
+  position: relative;
+  height: 17px;
+  top: 10px;
+  width: 46%;
+  border-bottom: 1px solid black;
+}
+
+.headerInfo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+
+  &__phones {
+    width: 35%;
+    display: flex;
+    padding-top: 20px;
+  }
+
+  &__phoneNumber {
+    display: block;
+    text-decoration: none;
+    padding: 15px;
+    position: relative;
+  }
+  &__number {
+    font-weight: 600;
+    color: #000;
+  }
+  &__text {
+    font-size: 11px;
+    color: $lightOrange;
+  }
+  &__text:after {
+    content: "";
+    position: absolute;
+    width: 25px;
+    right: 15px;
+    bottom: 22px;
+    height: 1px;
+    background-color: $lightOrange;
+  }
+}
+
+.headerLogo {
+  width: 30%;
+  &__logo {
+    display: block;
+    margin: 0 auto;
+  }
+}
+
+.headerButtons {
+  width: 35%;
+  padding: 15px;
+  display: flex;
+  justify-content: flex-end;
+
+  &__btn {
+    width: 185px;
+    padding: 5px 0;
+    margin-left: 15px;
+    cursor: pointer;
+    transition: all 0.3s;
+  }
+  &__btnOne {
+    background-color: transparent;
+    border: 1px solid black;
+    &:hover {
+      background-color: rgba(0, 0, 0, 0.1);
+    }
+  }
+  &__btnTwo {
+    background-color: $lightOrange;
+    border: 1px solid transparent;
+    color: $white;
+    &:hover {
+      background-color: #967760;
+    }
+  }
+}
+
+.menu {
+  width: 100%;
+  background-color: $darkGray;
+  &__link {
+    text-decoration: none;
+  }
+  &__list {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    list-style: none;
+    padding: 0 15px;
+    margin: 20px 0;
+  }
+  &__item {
+    margin: 25px 0;
+    color: $white;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.burgerMenu {
+  width: 100%;
+  background-color: $darkGray;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: none;
+  &__link {
+    display: block;
+    padding: 5px;
+    width: 100%;
+    text-decoration: none;
+  }
+  &__link:not(:first-child) {
+    border-bottom: 1px solid $textGray;
+  }
+  &__item {
+    margin: 25px 0;
+    color: $white;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.burgerMenu--active {
+  display: block;
+}
+
+.menuIcon {
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  cursor: pointer;
+  background-color: $darkGray;
+  color: $white;
+  padding: 10px;
+  text-align: center;
+  z-index: 30;
+  display: none;
+}
+
+.fa-bars,
+.fa-times {
+  font-size: 25px;
+}
+
+.icon--inactive {
+  display: none;
+}
+
+.elem {
+  width: 1px;
+  height: 20px;
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.mainBlock {
+  width: 100%;
+  position: relative;
+  top: -20px;
+  background-image: url("/img/bg.png");
+  background-repeat: no-repeat;
+  background-position: 0 -220px;
+  margin-bottom: 50px;
+}
+
+.crumbs {
+  border-bottom: 1px solid $lightGray;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 11px;
+  &__elem {
+    width: 1px;
+    height: 10px;
+    border-right: 1px solid $darkGray;
+  }
+  &__link {
+    text-decoration: none;
+    display: block;
+    padding: 5px;
+    color: $darkGray;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  &__link--active {
+    color: $lightOrange;
+  }
+}
+
+.title {
+  width: 350px;
+  text-align: center;
+  margin: 30px auto 40px;
+  &__main {
+    display: flex;
+    align-items: center;
+  }
+  &__line {
+    margin-top: 5px;
+    width: 80px;
+    height: 2px;
+    background-color: $lightOrange;
+  }
+  &__excursions {
+    font-family: "Noto Serif JP", serif;
+    font-size: 37px;
+    line-height: 37px;
+    padding: 0 20px;
+  }
+}
+.blockText {
+  width: 65%;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 30px;
+}
+.excursions {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 60px 0;
+  margin-top: 30px;
+}
+.excursionsItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 10px;
+  &__title {
+    font-family: "Noto Serif JP", serif;
+    font-size: 25px;
+    line-height: 25px;
+    text-transform: uppercase;
+    margin-top: 30px;
+  }
+  &__elem {
+    width: 90px;
+    height: 1px;
+    background-color: $lightOrange;
+    margin: 30px 0;
+  }
+  &__text {
+    text-align: center;
+    margin-bottom: 25px;
+    padding: 0 15px;
+  }
+  &__button {
+    padding: 15px 85px;
+    border: 2px solid black;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    &:hover {
+      background-color: $lightOrange;
+      color: $darkGray;
+    }
+  }
+  &__img {
+    width: 100%;
+  }
+}
+
+footer {
+  background-color: #131313;
+  color: $white;
+}
+.footerBlocks {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.footerBlock {
+  width: 250px;
+  padding-top: 30px;
+  &__title {
+    font-family: "Noto Serif JP", serif;
+    font-size: 19px;
+    line-height: 19px;
+  }
+  &__elem {
+    width: 80px;
+    height: 1px;
+    background-color: $lightOrange;
+    margin: 20px 0 30px;
+  }
+  &__item {
+    cursor: pointer;
+    font-size: 15px;
+    color: $textGray;
+    display: block;
+    &:hover {
+      color: $white;
+    }
+  }
+  &__order {
+    cursor: pointer;
+    display: block;
+    font-size: 17px;
+    border-bottom: 2px solid $textGray;
+    color: $textGray;
+    &:hover {
+      color: $white;
+    }
+  }
+  &__social {
+    padding: 10px 25px;
+    text-align: right;
+    background-color: #343434;
+    color: $white;
+    margin-top: 20px;
+  }
+  &__smallText {
+    color: $textGray;
+    font-size: 10px;
+  }
+}
+.socialPhone {
+  color: $white;
+  text-decoration: none;
+}
+.icons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.fab {
+  color: $textGray;
+  font-size: 30px;
+  cursor: pointer;
+  &:hover {
+    color: $lightOrange;
+  }
+}
+
+.footerElem {
+  height: 130px;
+  width: 1px;
+  background-color: rgba(255, 255, 255, 0.5);
+  margin-right: 20px;
+}
+.footerCopyright {
+  color: $textGray;
+  padding: 50px 0 30px;
+}
+
+@media screen and (max-width: 1200px) {
+  .headerInfo {
+    flex-direction: column;
+    &__phones {
+      width: auto;
+    }
+  }
+  .header {
+    background-color: rgb(251, 242, 223);
+  }
+
+  .mainBlock {
+    top: 0px;
+  }
+  .menu__list {
+    flex-wrap: wrap;
+  }
+  .excursions {
+    grid-template-columns: 1fr;
+  }
+  .excursionsItem__text {
+    width: 50%;
+  }
+  .footerBlocks {
+    flex-wrap: nowrap;
+  }
+  .footerBlockCars {
+    display: none;
+  }
+}
+@media screen and (max-width: 900px) {
+  .header {
+    position: relative;
+  }
+  .menu {
+    display: none;
+  }
+  .menuIcon {
+    display: block;
+  }
+  .headerLogo__logo {
+    width: 100%;
+  }
+  .headerButtons {
+    width: 60%;
+  }
+  .headerInfo__phones {
+    display: flex;
+    flex-direction: column;
+  }
+  .headerLogo {
+    width: 30%;
+  }
+  .excursions {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: scroll;
+    padding-bottom: 20px;
+  }
+  .excursionsItem {
+    width: 100%;
+  }
+  .excursionsItem__title {
+    text-align: center;
+  }
+  .excursionsItem__text {
+    width: 90%;
+  }
+  .footerBlocks {
+    flex-wrap: wrap;
+  }
+}
+@media screen and (max-width: 375px) {
+  .header__rows {
+    display: none;
+  }
+
+  .headerButtons {
+    display: none;
+  }
+  .headerInfo {
+    flex-direction: column-reverse;
+  }
+  .title {
+    width: 250px;
+  }
+  .title__line {
+    width: 40px;
+  }
+  .title__top {
+    font-size: 12px;
+  }
+  .title__excursions {
+    font-size: 25px;
+  }
+  .blockText {
+    width: 100%;
+  }
+  .excursionsItem__text {
+    width: 100%;
+  }
+}
