@@ -258,18 +258,21 @@ body {
     padding: 0 20px;
   }
 }
+
 .blockText {
   width: 65%;
   margin: 0 auto;
   text-align: center;
   margin-bottom: 30px;
 }
+
 .excursions {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 60px 0;
   margin-top: 30px;
 }
+
 .excursionsItem {
   display: flex;
   flex-direction: column;
@@ -313,6 +316,7 @@ footer {
   background-color: #131313;
   color: $white;
 }
+
 .footerBlocks {
   display: flex;
   align-items: flex-end;
@@ -366,10 +370,12 @@ footer {
     font-size: 10px;
   }
 }
+
 .socialPhone {
   color: $white;
   text-decoration: none;
 }
+
 .icons {
   display: flex;
   justify-content: space-between;
@@ -402,6 +408,7 @@ footer {
       width: auto;
     }
   }
+
   .header {
     background-color: rgb(251, 242, 223);
   }
@@ -409,64 +416,82 @@ footer {
   .mainBlock {
     top: 0px;
   }
+
   .menu__list {
     flex-wrap: wrap;
   }
+
   .excursions {
     grid-template-columns: 1fr;
   }
+
   .excursionsItem__text {
     width: 50%;
   }
+
   .footerBlocks {
     flex-wrap: nowrap;
   }
+
   .footerBlockCars {
     display: none;
   }
 }
+
 @media screen and (max-width: 900px) {
   .header {
     position: relative;
   }
+
   .menu {
     display: none;
   }
+
   .menuIcon {
     display: block;
   }
+
   .headerLogo__logo {
     width: 100%;
   }
+
   .headerButtons {
     width: 60%;
   }
+
   .headerInfo__phones {
     display: flex;
     flex-direction: column;
   }
+
   .headerLogo {
     width: 30%;
   }
+
   .excursions {
     display: flex;
     flex-wrap: nowrap;
     overflow-x: scroll;
     padding-bottom: 20px;
   }
+
   .excursionsItem {
     width: 100%;
   }
+
   .excursionsItem__title {
     text-align: center;
   }
+
   .excursionsItem__text {
     width: 90%;
   }
+
   .footerBlocks {
     flex-wrap: wrap;
   }
 }
+
 @media screen and (max-width: 375px) {
   .header__rows {
     display: none;
@@ -475,24 +500,31 @@ footer {
   .headerButtons {
     display: none;
   }
+
   .headerInfo {
     flex-direction: column-reverse;
   }
+
   .title {
     width: 250px;
   }
+
   .title__line {
     width: 40px;
   }
+
   .title__top {
     font-size: 12px;
   }
+
   .title__excursions {
     font-size: 25px;
   }
+
   .blockText {
     width: 100%;
   }
+
   .excursionsItem__text {
     width: 100%;
   }
